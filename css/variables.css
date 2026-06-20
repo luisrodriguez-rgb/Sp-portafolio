@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+    --bg-obsidian: #080B11;
+    --card-navy: #121824;
+    --card-navy-light: #1A2232;
+    --cobalt-accent: #2B66FF;
+    --cobalt-hover: #1A4DFF;
+    --ice-accent: #8ECAFF;
+    --cobalt-glow: rgba(43, 102, 255, 0.15);
+    --border-subtle: rgba(43, 102, 255, 0.12);
+    --border-hover: rgba(43, 102, 255, 0.3);
+    --text-light: #F4F6FB;
+    --text-slate: #8F9BB3;
+    --text-dark: #080B11;
+    --white: #FFFFFF;
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-hover: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

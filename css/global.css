@@ -1,0 +1,218 @@
+/* Base Resets & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-obsidian);
+    color: var(--text-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cobalt-accent) var(--bg-obsidian);
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--bg-obsidian);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--cobalt-accent);
+    border-radius: 4px;
+}
+
+body {
+    background: var(--bg-obsidian);
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Background Ambient Glows */
+.ambient-glow-1 {
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(43, 102, 255, 0.08) 0%, transparent 70%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.ambient-glow-2 {
+    position: fixed;
+    bottom: 10%;
+    left: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(142, 202, 255, 0.04) 0%, transparent 75%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Container Utility */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-hover);
+    border: none;
+}
+
+.btn i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover i.ri-arrow-right-line,
+.btn:hover i.ri-arrow-right-up-line {
+    transform: translate(4px, -2px);
+}
+
+.btn-primary {
+    background: var(--cobalt-accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--cobalt-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--cobalt-glow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+}
+
+.btn-white {
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+.btn-white:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+}
+
+/* Animation utilities for Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-left-reveal {
+    opacity: 0;
+}
+
+.slide-left-reveal.active {
+    animation: slideInLeft 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Text hover color fill effect */
+.text-fill-hover {
+    position: relative;
+    color: var(--white);
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.text-fill-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--cobalt-accent);
+    border-radius: 8px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+}
+
+.text-fill-hover:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--cobalt-glow);
+}
+
+.text-fill-hover:hover::before {
+    transform: scaleX(1);
+}
