@@ -76,8 +76,8 @@
             </div>
 
             <!-- Presentation Block (Large Horizontal Card) -->
-            <div class="presentation-block reveal" id="sobre-mi" style="transition-delay: 0.3s;">
-                <div class="pres-intro">
+            <div class="presentation-block reveal" id="sobre-mi">
+                <div class="pres-intro reveal">
                     <p class="pres-text">
                         Soy <strong>estudiante de Economía y Negocios Internacionales en ICESI</strong>, Cali. Presidente de Beta Gamma Sigma y monitor académico del campus.
                         <br><br>
@@ -95,33 +95,43 @@
                 </div>
                 
                 <div class="pres-cards">
-                    <div class="pres-card-cobalt">
-                        <div class="pres-card-icon">◆</div>
-                        <h4>Estrategia<br>& Negocios</h4>
-                    </div>
-                    <div class="pres-card-white">
-                        <div class="pres-card-icon"><i class="ri-code-s-slash-line"></i></div>
-                        <div>
-                            <h4>Sistemas a Medida</h4>
-                            <p>Estructura real con ejecución medible orientada a resultados.</p>
+                    <div class="reveal" style="transition-delay: 0.1s;">
+                        <div class="pres-card-cobalt">
+                            <div class="pres-card-icon">◆</div>
+                            <h4>Estrategia<br>& Negocios</h4>
                         </div>
                     </div>
-                    <div class="pres-card-dark">
-                        <div class="pres-card-icon"><i class="ri-cpu-line"></i></div>
-                        <div>
-                            <h4>IA Aplicada</h4>
-                            <p>Prompts avanzados y automatización de operaciones con inteligencia artificial.</p>
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <div class="pres-card-white">
+                            <div class="pres-card-icon"><i class="ri-code-s-slash-line"></i></div>
+                            <div>
+                                <h4>Sistemas a Medida</h4>
+                                <p>Estructura real con ejecución medible orientada a resultados.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="pres-card-cobalt" style="transform: rotate(2deg);">
-                        <div class="pres-card-icon"><i class="ri-eye-line"></i></div>
-                        <h4>Build in<br>Public</h4>
+                    <div class="reveal" style="transition-delay: 0.3s;">
+                        <div class="pres-card-dark">
+                            <div class="pres-card-icon"><i class="ri-cpu-line"></i></div>
+                            <div>
+                                <h4>IA Aplicada</h4>
+                                <p>Prompts avanzados y automatización de operaciones con inteligencia artificial.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pres-card-white" style="grid-column: span 2;">
-                        <div class="pres-card-icon"><i class="ri-pulse-line"></i></div>
-                        <div>
-                            <h4>Diagnóstico Estratégico</h4>
-                            <p>Identifica el bloqueo real detrás de los síntomas de tu negocio mediante datos y preguntas correctas.</p>
+                    <div class="reveal" style="transition-delay: 0.4s;">
+                        <div class="pres-card-cobalt" style="transform: rotate(2deg);">
+                            <div class="pres-card-icon"><i class="ri-eye-line"></i></div>
+                            <h4>Build in<br>Public</h4>
+                        </div>
+                    </div>
+                    <div class="reveal" style="grid-column: span 2; transition-delay: 0.5s;">
+                        <div class="pres-card-white">
+                            <div class="pres-card-icon"><i class="ri-pulse-line"></i></div>
+                            <div>
+                                <h4>Diagnóstico Estratégico</h4>
+                                <p>Identifica el bloqueo real detrás de los síntomas de tu negocio mediante datos y preguntas correctas.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,29 +159,45 @@
                 <h2 class="section-title">Métricas Clave</h2>
             </div>
             
-            <div class="metrics-grid">
-                <div class="metric-item reveal">
-                    <div class="metric-num">20</div>
-                    <div class="metric-content">
-                        <h3 class="metric-title">Años — ICESI, Cali</h3>
-                        <p class="metric-desc">Estudiante de Economía y Negocios Internacionales. Monitor académico y Presidente de la prestigiosa sociedad Beta Gamma Sigma.</p>
-                    </div>
+            <!-- Metric 1: 20 Años -->
+            <div class="metric-row reveal">
+                <div class="metric-row-content parallax-scroll" data-speed="-0.08">
+                    <div class="metric-num text-fill-hover">20</div>
+                    <h3 class="metric-title" style="font-size: 2rem; margin-bottom: 16px;">Años — ICESI, Cali</h3>
+                    <p class="metric-desc" style="font-size: 1.1rem; color: var(--text-slate); line-height: 1.7;">
+                        Estudiante de Economía y Negocios Internacionales. Monitor académico del campus y Presidente de la prestigiosa sociedad de honor <strong>Beta Gamma Sigma</strong>.
+                    </p>
                 </div>
-
-                <div class="metric-item reveal" style="transition-delay: 0.1s;">
-                    <div class="metric-num">75d</div>
-                    <div class="metric-content">
-                        <h3 class="metric-title">Sprint activo · Proyecto Libertad</h3>
-                        <p class="metric-desc">Construyendo un flujo de ingresos digitales desde cero y documentando todo el proceso con transparencia radical en público.</p>
-                    </div>
+                <div class="metric-row-media parallax-scroll" data-speed="0.2">
+                    <img src="metric_icesi.png" alt="ICESI Dashboard Mockup" class="mockup-img">
                 </div>
+            </div>
 
-                <div class="metric-item reveal" style="transition-delay: 0.2s;">
-                    <div class="metric-num">SP</div>
-                    <div class="metric-content">
-                        <h3 class="metric-title">Strategy Group · Consultoría</h3>
-                        <p class="metric-desc">Liderando diagnósticos estratégicos y soluciones de sistemas de negocio que conectan la visión directiva con métricas accionables.</p>
-                    </div>
+            <!-- Metric 2: 75d Sprint -->
+            <div class="metric-row reveal">
+                <div class="metric-row-media parallax-scroll" data-speed="0.2">
+                    <img src="metric_libertad.png" alt="Libertad Phone Mockup" class="mockup-img">
+                </div>
+                <div class="metric-row-content parallax-scroll" data-speed="-0.08" style="text-align: right; align-items: flex-end;">
+                    <div class="metric-num text-fill-hover">75d</div>
+                    <h3 class="metric-title" style="font-size: 2rem; margin-bottom: 16px;">Sprint activo · Proyecto Libertad</h3>
+                    <p class="metric-desc" style="font-size: 1.1rem; color: var(--text-slate); line-height: 1.7; max-width: 500px;">
+                        Construyendo un flujo de ingresos digitales desde cero y documentando todo el proceso con transparencia radical en público: los números, las decisiones, los errores.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Metric 3: SP Strategy Group -->
+            <div class="metric-row reveal">
+                <div class="metric-row-content parallax-scroll" data-speed="-0.08">
+                    <div class="metric-num text-fill-hover">SP</div>
+                    <h3 class="metric-title" style="font-size: 2rem; margin-bottom: 16px;">Strategy Group · Consultoría</h3>
+                    <p class="metric-desc" style="font-size: 1.1rem; color: var(--text-slate); line-height: 1.7;">
+                        Liderando diagnósticos estratégicos y soluciones de sistemas de negocio a medida que conectan la visión empresarial y de datos con ejecución real y resultados medibles.
+                    </p>
+                </div>
+                <div class="metric-row-media parallax-scroll" data-speed="0.2">
+                    <img src="metric_strategy.png" alt="Strategy Diagnostic Mockup" class="mockup-img">
                 </div>
             </div>
         </div>
@@ -194,42 +220,47 @@
                 <h2 class="section-title">Productos Digitales</h2>
             </div>
 
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card reveal">
+            <!-- Product alternating rows with mockups and parallax scroll linked triggers -->
+            <!-- Product 1 -->
+            <div class="product-row reveal">
+                <div class="prod-row-content parallax-scroll" data-speed="-0.05">
                     <div class="prod-header">
                         <span class="prod-tag">P1 — Productividad</span>
-                        <span class="prod-index">01</span>
+                        <span class="prod-index text-fill-hover">01</span>
                     </div>
-                    <div>
-                        <h3 class="prod-title">Sistema de Productividad en Notion</h3>
-                        <p class="prod-desc">Un sistema completo en Notion para gestionar tu tiempo, proyectos y hábitos como un founder. Todo integrado y listo para usar desde el día uno.</p>
-                    </div>
-                    <div class="prod-footer">
+                    <h3 class="prod-title">Sistema de Productividad en Notion</h3>
+                    <p class="prod-desc">Un sistema completo en Notion para gestionar tu tiempo, proyectos y hábitos como un founder. Todo integrado y listo para usar desde el día uno.</p>
+                    <div class="prod-footer" style="justify-content: flex-start; gap: 32px;">
                         <div class="prod-price">
                             <span class="price-val">$29</span>
                             <span class="price-curr">USD</span>
                         </div>
-                        <a href="https://nas.com/checkout-global?communityId=69c9e5a824ea3afab3793bca&communityCode=SAMUELS_BUSINESS_712145&requestor=signupRequestor&linkClicked=https%3A%2F%2Fnas.com%2Fportal%2Fdigital-files%2Fmanage%3Fid%3D69cf43bf1636cf02e7cca170&sourceInfoType=folder&sourceInfoOrigin=69cf43bf1636cf02e7cca170" target="_blank" class="btn btn-primary">Conseguir ahora →</a>
+                        <a href="https://nas.com/checkout-global?communityId=69c9e5a824ea3afab3793bca&communityCode=SAMUELS_BUSINESS_712145&requestor=signupRequestor&linkClicked=https%3A%2F%2Fnas.com%2Fportal%2Fdigital-files%2Fmanage%3Fid%3D69cf43bf1636cf02e7cca170&sourceInfoType=folder&sourceInfoOrigin=69cf43bf1636cf02e7cca170" target="_blank" class="btn btn-primary">Conseguir ahora <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
+                <div class="prod-row-media parallax-scroll" data-speed="0.25">
+                    <img src="product_notion.png" alt="Notion Productivity System Mockup" class="mockup-img">
+                </div>
+            </div>
 
-                <!-- Product 2 -->
-                <div class="product-card reveal" style="transition-delay: 0.1s;">
+            <!-- Product 2 -->
+            <div class="product-row reveal" style="transition-delay: 0.1s;">
+                <div class="prod-row-media parallax-scroll" data-speed="0.25">
+                    <img src="product_ai.png" alt="AI Prompts Book Mockup" class="mockup-img">
+                </div>
+                <div class="prod-row-content parallax-scroll" data-speed="-0.05">
                     <div class="prod-header">
                         <span class="prod-tag">P2 — Inteligencia Artificial</span>
-                        <span class="prod-index">02</span>
+                        <span class="prod-index text-fill-hover">02</span>
                     </div>
-                    <div>
-                        <h3 class="prod-title">Manual de Prompts IA para Negocios</h3>
-                        <p class="prod-desc">Más de 50 prompts probados para usar IA como si tuvieras un equipo de estrategas. Desde análisis de mercado hasta copywriting y operaciones de negocio.</p>
-                    </div>
-                    <div class="prod-footer">
+                    <h3 class="prod-title">Manual de Prompts IA para Negocios</h3>
+                    <p class="prod-desc">Más de 50 prompts probados para usar IA como si tuvieras un equipo de estrategas. Desde análisis de mercado hasta copywriting y operaciones de negocio.</p>
+                    <div class="prod-footer" style="justify-content: flex-start; gap: 32px;">
                         <div class="prod-price">
                             <span class="price-val">$49</span>
                             <span class="price-curr">USD</span>
                         </div>
-                        <a href="https://nas.com/checkout-global?communityId=69c9e5a824ea3afab3793bca&communityCode=SAMUELS_BUSINESS_712145&requestor=signupRequestor&linkClicked=https%3A%2F%2Fnas.com%2Fportal%2Fdigital-files%2Fmanage%3Fid%3D69de6c997054e3e8e0387bca&sourceInfoType=folder&sourceInfoOrigin=69de6c997054e3e8e0387bca" target="_blank" class="btn btn-primary">Conseguir ahora →</a>
+                        <a href="https://nas.com/checkout-global?communityId=69c9e5a824ea3afab3793bca&communityCode=SAMUELS_BUSINESS_712145&requestor=signupRequestor&linkClicked=https%3A%2F%2Fnas.com%2Fportal%2Fdigital-files%2Fmanage%3Fid%3D69de6c997054e3e8e0387bca&sourceInfoType=folder&sourceInfoOrigin=69de6c997054e3e8e0387bca" target="_blank" class="btn btn-primary">Conseguir ahora <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>

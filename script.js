@@ -118,4 +118,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Parallax scroll effect for products/metrics mockups and cards
+    const parallaxElements = document.querySelectorAll('.parallax-scroll');
+    
+    const handleParallax = () => {
+        const scrolled = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        
+        parallaxElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const elementTop = rect.top + scrolled;
+            const elementHeight = rect.height;
+            
+            // Check if element is in viewport
+            if (scrolled + windowHeight > elementTop && scrolled < elementTop + elementHeight) {
+                // Calculate scroll progress through viewport (0 to 1)
+                const scrollProgress = (scrolled + windowHeight - elementTop) / (windowHeight + elementHeight);
+                // Apply subtle parallax movement (using offset and easing)
+                const speed = parseFloat(el.getAttribute('data-speed')) || 0.15;
+                const yTranslation = (scrollProgress - 0.5) * 120 * speed;
+                el.style.transform = `translateY(${yTranslation}px)`;
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleParallax);
+    window.addEventListener('resize', handleParallax);
+    handleParallax(); // Run once on load
 });

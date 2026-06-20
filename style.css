@@ -1239,3 +1239,123 @@ footer {
         padding: 40px 24px;
     }
 }
+
+/* Alternating rows and mockups for Products and Metrics */
+.product-row {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 40px;
+    background: var(--card-navy);
+    border: 1px solid var(--border-subtle);
+    border-radius: 40px;
+    padding: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.product-row:nth-child(even) {
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+.product-row::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--cobalt-glow) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.prod-row-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.prod-row-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: var(--transition-smooth);
+    will-change: transform;
+}
+
+.mockup-img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    transition: var(--transition-smooth);
+}
+
+.mockup-img:hover {
+    transform: scale(1.02);
+}
+
+/* Metric Row Styles */
+.metric-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.metric-row:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.metric-row:last-child {
+    margin-bottom: 0;
+}
+
+.metric-row-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.metric-row-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: var(--transition-smooth);
+    will-change: transform;
+}
+
+@media (max-width: 1024px) {
+    .product-row {
+        grid-template-columns: 1fr !important;
+        padding: 40px;
+        gap: 40px;
+    }
+    
+    .product-row .prod-row-media {
+        order: -1;
+    }
+    
+    .metric-row {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+    
+    .metric-row .metric-row-media {
+        order: -1;
+    }
+    
+    .mockup-img {
+        max-height: 280px;
+    }
+}
