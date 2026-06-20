@@ -1291,6 +1291,28 @@ footer {
     transform: translateY(0);
 }
 
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 @keyframes slideInLeft {
     from {
         transform: translateX(150px);
@@ -1414,6 +1436,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .reveal-left, .reveal-right {
+        transform: translateY(30px) !important;
+    }
+
     .products-grid-5 {
         grid-template-columns: 1fr !important;
     }

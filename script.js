@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Scroll Reveal Animation (Intersection Observer)
-    const revealElements = document.querySelectorAll('.reveal, .slide-left-reveal');
+    const revealElements = document.querySelectorAll('.reveal, .slide-left-reveal, .reveal-left, .reveal-right');
     
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -57,6 +57,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(element => {
         revealObserver.observe(element);
+    });
+
+    // Count-up animation for numbers (Progressive Enhancement)
+    const countUpElements = document.querySelectorAll('.count-up');
+    
+    const countUpObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                const suffix = el.getAttribute('data-suffix') || '';
+                const duration = 1500; // 1.5 seconds duration
+                const startTime = performance.now();
+                
+                const animateCount = (now) => {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const easeProgress = progress * (2 - progress); // Ease out quad
+                    const currentValue = Math.floor(easeProgress * target);
+                    
+                    el.textContent = currentValue + suffix;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animateCount);
+                    } else {
+                        el.textContent = target + suffix;
+                    }
+                };
+                
+                requestAnimationFrame(animateCount);
+                observer.unobserve(el);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    countUpElements.forEach(el => {
+        const suffix = el.getAttribute('data-suffix') || '';
+        el.textContent = '0' + suffix;
+        countUpObserver.observe(el);
     });
 
     // Sticky Navbar Style Update on Scroll
