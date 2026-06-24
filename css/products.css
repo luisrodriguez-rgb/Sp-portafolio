@@ -24,11 +24,11 @@
 .product-card {
     position: relative;
     border-radius: 32px;
-    padding: 40px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 550px; /* Fixed height on desktop to prevent neighbor stretching on hover */
+    height: 580px; /* Fixed height on desktop to prevent neighbor stretching on hover */
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
     z-index: 1;
@@ -333,8 +333,7 @@
     .products-grid-5 > .product-card {
         grid-column: span 2 !important;
         padding: 30px;
-        height: auto !important;
-        min-height: 500px;
+        height: 580px !important;
     }
     
     .products-grid-5 > .product-card:nth-child(4) {
@@ -353,7 +352,6 @@
     
     .products-grid-5 > .product-card {
         grid-column: span 1 !important;
-        height: auto !important;
-        min-height: 450px;
+        height: 580px !important;
     }
 }
