@@ -333,7 +333,7 @@
     .products-grid-5 > .product-card {
         grid-column: span 2 !important;
         padding: 30px;
-        height: 580px !important;
+        height: auto !important;
     }
     
     .products-grid-5 > .product-card:nth-child(4) {
@@ -342,6 +342,16 @@
     
     .products-grid-5 > .product-card:nth-child(5) {
         grid-column: 2 / span 2 !important;
+    }
+
+    /* Force hover details to be visible on touch devices */
+    .prod-card-hover-content {
+        opacity: 1 !important;
+        max-height: none !important;
+        transform: none !important;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        overflow: visible !important;
     }
 }
 
@@ -352,6 +362,7 @@
     
     .products-grid-5 > .product-card {
         grid-column: span 1 !important;
-        height: 580px !important;
+        height: auto !important;
+        padding: 24px;
     }
 }

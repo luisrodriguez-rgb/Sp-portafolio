@@ -405,6 +405,7 @@ footer {
     .service-pill {
         font-size: 1.2rem;
         height: 80px;
+        min-width: 140px; /* Allow pills to flow nicely in columns on narrow screens */
     }
     
     .service-pill-cobalt {
@@ -413,5 +414,29 @@ footer {
     
     .referral-card {
         padding: 40px 24px;
+    }
+
+    .gratis-card {
+        padding: 24px;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-grid {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .contact-grid .btn {
+        width: 100%;
+    }
+    
+    .quote-text {
+        font-size: 1.4rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
     }
 }

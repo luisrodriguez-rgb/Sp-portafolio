@@ -143,3 +143,18 @@ header {
         top: 70px;
     }
 }
+
+@media (max-width: 576px) {
+    .logo-text {
+        display: none;
+    }
+    
+    .navbar {
+        padding: 10px 16px;
+    }
+    
+    .nav-cta {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

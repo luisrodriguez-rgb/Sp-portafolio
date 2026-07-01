@@ -101,6 +101,11 @@
     .metric-row .metric-row-media {
         order: -1;
     }
+
+    .metric-row-content {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
     
     .mockup-img {
         max-height: 280px;

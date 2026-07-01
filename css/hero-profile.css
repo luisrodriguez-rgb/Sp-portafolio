@@ -227,6 +227,11 @@
 
 /* Responsive Overrides */
 @media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
     .hero-portrait {
         order: -1;
     }
@@ -250,6 +255,25 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 40px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+    }
+
+    .pres-ctas {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .pres-ctas .btn {
+        width: 100%;
+    }
+
     .pres-cards {
         grid-template-columns: 1fr;
     }
